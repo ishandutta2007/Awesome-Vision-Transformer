@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b16"/>
+      <stop offset="50%" stop-color="#12122c"/>
+      <stop offset="100%" stop-color="#050510"/>
+    </linearGradient>
+
+    <!-- Metallic/Cyber Gradient for Text -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/> <!-- Purple -->
+      <stop offset="50%" stop-color="#ec4899"/> <!-- Pink -->
+      <stop offset="100%" stop-color="#3b82f6"/> <!-- Blue -->
+    </linearGradient>
+
+    <!-- Patch Glow Gradient -->
+    <radialGradient id="glow-grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="cyan-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bg-grad)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+
+  <!-- Glowing background blobs -->
+  <circle cx="200" cy="200" r="180" fill="url(#glow-grad)" filter="blur(40px)" opacity="0.3"/>
+  <circle cx="1000" cy="200" r="220" fill="url(#cyan-glow)" filter="blur(50px)" opacity="0.4"/>
+
+  <!-- Left: The Visual Slicing (Image Patches) -->
+  <g transform="translate(100, 100)">
+    <!-- 4x4 Grid of Image Patches -->
+    <g stroke="#ffffff" stroke-opacity="0.2" fill="none" stroke-width="1.5">
+      <rect x="0" y="0" width="160" height="160" rx="10" stroke-dasharray="5 3"/>
+      <!-- Sliced Grid Lines -->
+      <line x1="40" y1="0" x2="40" y2="160"/>
+      <line x1="80" y1="0" x2="80" y2="160"/>
+      <line x1="120" y1="0" x2="120" y2="160"/>
+      <line x1="0" y1="40" x2="160" y2="40"/>
+      <line x1="0" y1="80" x2="160" y2="80"/>
+      <line x1="0" y1="120" x2="160" y2="120"/>
+    </g>
+
+    <!-- Highlighting individual patches with animation -->
+    <rect x="42" y="42" width="36" height="36" fill="#a855f7" fill-opacity="0.2" rx="4">
+      <animate attributeName="fill-opacity" values="0.1;0.7;0.1" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="122" y="82" width="36" height="36" fill="#06b6d4" fill-opacity="0.2" rx="4">
+      <animate attributeName="fill-opacity" values="0.7;0.1;0.7" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="82" y="122" width="36" height="36" fill="#ec4899" fill-opacity="0.2" rx="4">
+      <animate attributeName="fill-opacity" values="0.2;0.8;0.2" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Center-Left to Center-Right: Flowing Token Particles -->
+  <!-- We animate particles moving from the grid into the Transformer block -->
+  <g>
+    <!-- Particle 1 (Purple) -->
+    <circle cx="280" cy="180" r="4" fill="#a855f7">
+      <animate attributeName="cx" from="280" to="520" dur="4s" repeatCount="indefinite" begin="0s"/>
+      <animate attributeName="cy" values="180;150;200" dur="4s" repeatCount="indefinite" begin="0s"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <!-- Particle 2 (Pink) -->
+    <circle cx="280" cy="220" r="4.5" fill="#ec4899">
+      <animate attributeName="cx" from="280" to="520" dur="3s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="cy" values="220;250;200" dur="3s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <!-- Particle 3 (Cyan) -->
+    <circle cx="280" cy="200" r="3.5" fill="#06b6d4">
+      <animate attributeName="cx" from="280" to="520" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="cy" values="200;180;200" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+  <!-- Right: Transformer Core Visual Representation -->
+  <g transform="translate(900, 100)">
+    <!-- Main Encoder Box -->
+    <rect x="-10" y="-10" width="200" height="220" fill="none" stroke="#3b82f6" stroke-opacity="0.3" stroke-width="2" rx="15"/>
+    <text x="90" y="30" fill="#3b82f6" fill-opacity="0.8" font-family="'Courier New', Courier, monospace" font-size="12" text-anchor="middle" letter-spacing="2">TRANSFORMER</text>
+    
+    <!-- Self Attention Interconnections (nodes) -->
+    <g fill="#ffffff" fill-opacity="0.8">
+      <circle id="n1" cx="30" cy="70" r="6" fill="#a855f7"/>
+      <circle id="n2" cx="150" cy="70" r="6" fill="#06b6d4"/>
+      <circle id="n3" cx="90" cy="130" r="6" fill="#ec4899"/>
+      <circle id="n4" cx="30" cy="180" r="6" fill="#3b82f6"/>
+      <circle id="n5" cx="150" cy="180" r="6" fill="#10b981"/>
+    </g>
+
+    <!-- Connecting attention lines with pulse animation -->
+    <g stroke-width="1.5" stroke-opacity="0.3" fill="none">
+      <line x1="30" y1="70" x2="150" y2="70" stroke="#a855f7"/>
+      <line x1="30" y1="70" x2="90" y2="130" stroke="#a855f7"/>
+      <line x1="150" y1="70" x2="90" y2="130" stroke="#06b6d4"/>
+      <line x1="90" y1="130" x2="30" y2="180" stroke="#ec4899"/>
+      <line x1="90" y1="130" x2="150" y2="180" stroke="#ec4899"/>
+      <line x1="30" y1="180" x2="150" y2="180" stroke="#3b82f6"/>
+    </g>
+    
+    <!-- Dynamic self-attention beam paths -->
+    <path d="M 30 70 Q 90 100 150 180" stroke="url(#text-grad)" stroke-width="2.5" fill="none" stroke-dasharray="10 15">
+      <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Typography & Title in the Center -->
+  <g transform="translate(600, 200)">
+    <!-- Glowing behind title -->
+    <text x="0" y="-10" fill="url(#text-grad)" font-family="'Outfit', 'Inter', system-ui, -apple-system, sans-serif" font-size="48" font-weight="900" text-anchor="middle" letter-spacing="1">
+      Awesome Vision Transformer
+    </text>
+    <text x="0" y="35" fill="#94a3b8" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" text-anchor="middle" letter-spacing="6">
+      EVOLUTION • VARIANTS • APPLICATIONS
+    </text>
+  </g>
+</svg>

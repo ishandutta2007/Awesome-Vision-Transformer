@@ -1,11 +1,14 @@
 # Awesome-Vision-Transformer
-## Vision Transformers (ViTs): Evolution, Variants, Types, & Applications
+
+![Awesome Vision Transformer Banner](assets/banner.svg)
+
+## 👁️ Vision Transformers (ViTs): Evolution, Variants, Types, & Applications 🚀
 
 The Vision Transformer (ViT) represents a monumental paradigm shift in computer vision, dismantling decades of dominance held by Convolutional Neural Networks (CNNs). Introduced by Dosovitskiy et al. in 2020 ("An Image is Worth 16x16 Words"), ViTs reshape computer vision by treating image processing exactly like a natural language processing task. By slicing an image into a structured grid of flattening patches and treating each patch as a "word token," ViTs harness parallel Multi-Head Self-Attention (MHA) mechanics. This entirely removes convolutional inductive biases, allowing the network to capture global contextual relationships from layer zero, unlocking exceptional power-law scaling properties for foundation AI models.
 
 ---
 
-## 1. The Chronological Evolution
+## 🚀 1. The Chronological Evolution
 
 The technical progression of transformer-based vision has transitioned from rigid, compute-heavy token matrices to multi-scale spatial hierarchies, moving toward unified cross-modal foundation tokenization engines.
 
@@ -24,7 +27,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Attention Variants
+## 🧠 2. Core Functional & Attention Variants
 
 The Vision Transformer family tree features specialized architectural modifications designed to optimize patch processing speed and manage token density bounds.
 
@@ -37,7 +40,7 @@ The Vision Transformer family tree features specialized architectural modificati
 
 ---
 
-## 3. Training Dynamics & Pretext Modalities
+## 🏋️ 3. Training Dynamics & Pretext Modalities
 
 Because ViTs lack the localized spatial assumptions hardwired into convolutions, stabilizing their optimization requires specialized data-driven training schemes.
 
@@ -49,7 +52,7 @@ Because ViTs lack the localized spatial assumptions hardwired into convolutions,
 
 ---
 
-## 4. Production Engineering Challenges & Mitigations
+## 🛠️ 4. Production Engineering Challenges & Mitigations
 
 Deploying Vision Transformers within high-throughput commercial enterprise environments introduces intense memory bottlenecks and token-count inflation penalties.
 
@@ -60,7 +63,7 @@ Deploying Vision Transformers within high-throughput commercial enterprise envir
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🌐 5. Frontier Real-World AI Applications
 
 | Application Field | Year | Paper Link | Description & Use Case |
 | :--- | :--- | :--- | :--- |
