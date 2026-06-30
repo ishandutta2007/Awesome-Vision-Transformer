@@ -79,6 +79,20 @@ Deploying Vision Transformers within high-throughput commercial enterprise envir
 | [**Autonomous Vehicle Spatio-Temporal BEV Perception Stacks**](details/autonomous_vehicle_bev_perception.md) | 2022 | [Li et al., 2022](https://arxiv.org/abs/2203.17270) | Drives real-time navigation pipelines for self-driving vehicles and robotic fleets. Multiple camera streams are chunked into visual patch tokens, which are projected by a spatial transformer into a unified 3D Bird's-Eye-View (BEV) coordinate map to execute real-time path routing safely. |
 | [**Generative Flow-Matching and Video Diffusion Simulators (Sora Class)**](details/generative_flow_matching_video_diffusion.md) | 2024 | [OpenAI, 2024](https://openai.com/research/video-generation-models-as-world-simulators) | Serves as the core structural backbone for state-of-the-art video generation engines. Video clips are sliced into 3D spacetime token cubes (patches extended across time). The Spatio-Temporal ViT processes these cubes concurrently, predicting straight-line ODE trajectories to synthesize physically consistent, fluid video sequences. |
 
+---
+
+## ⭐️ Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-Vision-Transformer&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Vision-Transformer&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Vision-Transformer&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-Vision-Transformer&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
+
 
 
 
