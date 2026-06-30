@@ -9,9 +9,9 @@ The Vision Transformer (ViT) represents a monumental paradigm shift in computer 
 
 The technical progression of transformer-based vision has transitioned from rigid, compute-heavy token matrices to multi-scale spatial hierarchies, moving toward unified cross-modal foundation tokenization engines.
 
-
+```mermaid
 [Vanilla ViT (Dosovitskiy et al., 2020)] ----> [Hierarchical Windows (Swin, 2021)] ----> [Unified Multi-Modal Tokens (Chameleon/GPT-4o)](Quadratic O(N²) Compute Wall)                 (Linear O(N) Local Sliding Blocks)           (Omnidirectional Shared Token Workspace)
-
+```
 
 *   **The Vanilla Global Attention Era (Dosovitskiy et al., 2020)**
     *   *Concept:* The defining architectural breakthrough. Images were split into uniform $16\times16$ pixel patches, projected linearly into embedding spaces, appended with learned positional coordinates, and passed to a standard text-style Transformer encoder.
